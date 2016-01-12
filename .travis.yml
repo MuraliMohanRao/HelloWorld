@@ -15,10 +15,10 @@ android:
 
 before_install: 
 
-  - wget http://services.gradle.org/distributions/gradle-2.4-all.zip
-  - unzip -q -o gradle:2.4-all.zip
-  - export PATH="${BASEDIR}/gradle:2.4/bin:${PATH}"
-  - cd HelloWorld
+  # wget http://services.gradle.org/distributions/gradle-2.4-all.zip
+  # unzip -q -o gradle:2.4-all.zip
+  # export PATH="${BASEDIR}/gradle:2.4/bin:${PATH}"
+   cd HelloWorld
 
 
 jdk: oraclejdk7
