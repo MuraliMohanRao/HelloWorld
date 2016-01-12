@@ -1,10 +1,13 @@
 language: android
 
+before_install: 
  - wget https://downloads.gradle.org/distributions-snapshots/gradle-2.8-20150817220036 0000-all.zip
  - unzip -q -o gradle:2.8-20150817220036 0000-all.zip
  - export PATH="${BASEDIR}/g2.8-20150817220036 0000/bin:${PATH}"
+ - cd HelloWorld
 
-before_install: cd HelloWorld
+
+
 jdk: oraclejdk7
 
 env:
