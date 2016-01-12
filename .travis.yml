@@ -1,6 +1,13 @@
 language: android
 
-before_install: cd HelloWorld
+before_install: 
+
+  - wget http://services.gradle.org/distributions/gradle-2.4-all.zip
+  - unzip -q -o gradle:2.4-all.zip
+  - export PATH="${BASEDIR}/gradle:2.4/bin:${PATH}"
+  - cd HelloWorld
+
+
 jdk: oraclejdk7
 
 env:
@@ -9,5 +16,4 @@ env:
   matrix:
     - ANDROID_TARGET=android-23 ANDROID_ABI=armeabi-v7a
 
-script:
-    - ./gradle build
+ script: gradle build 
