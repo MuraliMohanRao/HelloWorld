@@ -1,10 +1,10 @@
- language: android
+language: android
 
 before_install: 
 
-  - wget http://services.gradle.org/distributions/gradle-2.8-all.zip
-  - unzip -q -o gradle:2.8-all.zip
-  - export PATH="${BASEDIR}/gradle:2.8/bin:${PATH}"
+  - wget http://services.gradle.org/distributions/gradle-2.4-all.zip
+  - unzip -q -o gradle:2.4-all.zip
+  - export PATH="${BASEDIR}/gradle:2.4/bin:${PATH}"
   - cd HelloWorld
 
 
