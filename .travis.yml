@@ -1,8 +1,13 @@
 language: android
+
+before_install: cd HelloWorld
 jdk: oraclejdk7
+
 env:
   global:
     - TERM=dumb
   matrix:
     - ANDROID_TARGET=android-23 ANDROID_ABI=armeabi-v7a
 
+script:
+    - ./gradle build
