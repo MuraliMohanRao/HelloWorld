@@ -3,9 +3,8 @@
 before_install: 
 
  - wget http://services.gradle.org/distributions/gradle-2.8-all.zip
-  - unzip gradle-2.8-all.zip
-  - export GRADLE_HOME=$PWD/gradle-2.8
-  - export PATH=$GRADLE_HOME/bin:$PATH
+  - unzip -q -o gradle:2.8-all.zip
+  - export PATH="${BASEDIR}/gradle:2.8/bin:${PATH}"
   - cd HelloWorld
 
 
