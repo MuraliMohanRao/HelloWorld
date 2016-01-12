@@ -1,8 +1,8 @@
 language: android
 
- - wget http://downloads.gradle.org/distributions/gradle:2.0.0-all.zip
- - unzip -q -o gradle:2.0.0-all.zip
- - export PATH="${BASEDIR}/gradle:2.0.0/bin:${PATH}"
+ - wget http://downloads.gradle.org/distributions/gradle:2.8-all.zip
+ - unzip -q -o gradle:2.8-all.zip
+ - export PATH="${BASEDIR}/gradle:2.8/bin:${PATH}"
 
 before_install: cd HelloWorld
 jdk: oraclejdk7
