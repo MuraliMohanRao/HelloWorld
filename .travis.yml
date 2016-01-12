@@ -13,4 +13,4 @@ env:
   matrix:
     - ANDROID_TARGET=android-23 ANDROID_ABI=armeabi-v7a
 
-script: gradlew build HelloWorld
+script: gradle build HelloWorld
