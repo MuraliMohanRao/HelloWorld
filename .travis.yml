@@ -14,6 +14,9 @@ env:
   matrix:
     - ANDROID_TARGET=android-23.0  ANDROID_ABI=armeabi-v7a
  
-script: ./gradlew connectedAndroidTest
+install:
+    - true
+
+script: TERM=dumb ./gradlew assembleDebug
 
 
