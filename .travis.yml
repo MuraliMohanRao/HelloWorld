@@ -12,7 +12,7 @@ env:
 
 android:
   components:
-    - android-23
+    - android-23.0
     - build-tools-23.0
 
 #script: gradle build
