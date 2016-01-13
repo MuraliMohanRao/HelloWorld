@@ -7,6 +7,11 @@ before_install:
   - export GRADLE_HOME=$PWD/gradle-2.8
   - export PATH=$GRADLE_HOME/bin:$PATH
   
+  android:
+  components:
+    - android-23.0.1
+    - build-tools-23.0.1
+    - sys-img-armeabi-v7a-android-23
   
 jdk: oraclejdk7
 
