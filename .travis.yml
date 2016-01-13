@@ -9,9 +9,9 @@ before_install:
   
 jdk: oraclejdk7
 
- env:  
-   global:  
-    - TERM=dumb
+  env:  
+    global:  
+     - TERM=dumb
 # script: gradle build
 
  install: 
