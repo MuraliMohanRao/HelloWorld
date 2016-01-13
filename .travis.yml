@@ -21,4 +21,5 @@ install:
 script:
   #TERM=dumb ./gradlew check
   #TERM=dumb ./gradlew testDebug --info
-  - ./gradlew assemble -x test
+  #- ./gradlew assemble -x test
+  - ./gradlew connectedAndroidTest
