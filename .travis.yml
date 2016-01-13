@@ -1,44 +1,7 @@
-
 language: android
-
-android:
-  components:
-    - tools
-    - android-19
-    - extra-android-support
-    - extra-android-m2repository
-
 jdk: oraclejdk7
 
-env:
-  matrix:
-    - ANDROID_TARGET=android-19  ANDROID_ABI=armeabi-v7a
-
-
-
-before_install:
-
-   - gem install calabash-android
-   - gem install calabash-cucumber
-   # Create and start emulator
-   - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
-   - emulator -avd test -no-skin -no-audio -no-window &
-   #- sleep 45
-
-
 install:
-  - TERM=dumb ./gradlew assemble
+    - true
 
-before_script:
-  # Make sure the emulator has started before running tests
-
- - chmod +x wait_for_emulator
- - ./wait_for_emulator
-
-script:
-  #- TERM=dumb ./gradlew clean build connectedAndroidTest
-  #- ./gradlew clean build
-  #- adb install -r features/app-debug-unaligned.apk
-  - calabash-android resign features/bin/app-debug-unaligned.apk
-  - calabash-android build features/bin/app-debug-unaligned.apk
-  - travis_wait calabash-android run features/bin/app-debug-unaligned.apk
+script: TERM=dumb ./gradlew assembleDebug
