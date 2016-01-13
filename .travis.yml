@@ -22,4 +22,4 @@ script:
   #TERM=dumb ./gradlew check
   #TERM=dumb ./gradlew testDebug --info
   #- ./gradlew assemble -x test
-  - ./gradlew connectedAndroidTest
+  - TERM=dumb ./gradlew connectedAndroidTest
