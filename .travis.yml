@@ -7,10 +7,6 @@ env:
   global:
     - TERM=dumb
 
-#script: gradle build
+script: gradle build
 
-install:
-  - TERM=dumb gradlew assemble
 
-script:
-  - TERM=dumb gradlew check
