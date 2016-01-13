@@ -9,12 +9,11 @@ before_install:
   
 jdk: oraclejdk7
 
-env:
-  global:
-    - TERM=dumb
+#script: gradle build
 
 install:
   - TERM=dumb ./gradlew assemble
-script: gradle build
-#script: - TERM=dumb ./gradlew check
+
+script:
+  - TERM=dumb ./gradlew check
 
