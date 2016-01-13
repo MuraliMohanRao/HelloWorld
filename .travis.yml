@@ -1,21 +1,35 @@
 
 language: android
+
 jdk: oraclejdk7
-env:
-  matrix:
-    - ANDROID_TARGET=android-19  ANDROID_ABI=armeabi-v7a
 
 android:
   components:
-    - build-tools-19.0.0
+    - tools
+    - android-23.0
+    - extra-android-support
+    - extra-android-m2repository
+
+env:
+  matrix:
+    - ANDROID_TARGET=android-23.0  ANDROID_ABI=armeabi-v7a
+
+before_install:
+   # Create and start emulator
+   - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
+   - emulator -avd test -no-skin -no-audio -no-window &
+   #- sleep 45
+
+
+install:
+  - TERM=dumb ./gradlew assemble
 
 before_script:
-  # Create and start emulator
-  - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
-  - emulator -avd test -no-skin -no-audio -no-window &
-  - adb wait-for-device
-  - adb shell input keyevent 82 &
+  # Make sure the emulator has started before running tests
 
-script: TERM=dumb ./gradlew assembleDebug
+ - chmod +x wait_for_emulator
+ - ./wait_for_emulator
+ 
+script: ./gradlew connectedAndroidTest
 
 
