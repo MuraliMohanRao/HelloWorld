@@ -17,8 +17,13 @@ env:
 install:
     - true
 
-script: 
-   - TERM=dumb ./gradlew test assembleDebug
+script:
+    - echo "Travis branch is $TRAVIS_BRANCH"
+    - echo "Travis branch is in pull request $TRAVIS_PULL+REQUEST"
+    - mvn clean install -P 'guice'
+
+#script: 
+   #- TERM=dumb ./gradlew test assembleDebug
    #- TERM=dumb ./gradlew assembleDebug
    #- TERM=dumb ./gradlew assembleDebug -PdisablePreDex
    #- TERM=dumb ./gradlew test assembleDebug -PdisablePreDex
