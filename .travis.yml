@@ -1,4 +1,4 @@
- language: android
+language: android
 
 before_install: 
   - cd HelloWorld
@@ -9,13 +9,13 @@ before_install:
   
 jdk: oraclejdk7
 
-  env:  
-    global:  
-     - TERM=dumb
-# script: gradle build
+env:
+  global:
+    - TERM=dumb
 
- install: 
+#script: gradle build
+install:
   - TERM=dumb ./gradlew assemble
 
- script: 
+script:
   - TERM=dumb ./gradlew check
