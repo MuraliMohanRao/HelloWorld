@@ -20,7 +20,8 @@ install:
 script: 
    #- TERM=dumb ./gradlew assembleDebug
    #- TERM=dumb ./gradlew assembleDebug -PdisablePreDex
-   - TERM=dumb ./gradlew test assembleDebug -PdisablePreDex
+   #- TERM=dumb ./gradlew test assembleDebug -PdisablePreDex
+   - TERM=dumb ./gradlew build connectedCheck
    #- TERM=dumb ./gradlew check
 
 
