@@ -19,4 +19,5 @@ install:
 
 script:
   #TERM=dumb ./gradlew check
-  - TERM=dumb ./gradlew testDebug --info
+  #TERM=dumb ./gradlew testDebug --info
+  - ./gradlew assemble -x test
