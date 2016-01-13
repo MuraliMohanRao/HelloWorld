@@ -1,4 +1,4 @@
-language: android
+ language: android
 
 before_install: 
   - cd HelloWorld
@@ -19,5 +19,3 @@ jdk: oraclejdk7
 
  script: 
   - TERM=dumb ./gradlew check
-  
-  
